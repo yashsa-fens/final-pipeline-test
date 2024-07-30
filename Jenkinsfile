@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     
-                    bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "bash script.sh 0 apply"'
+                    bat 'script.sh all plan'
 
                 }
             }
