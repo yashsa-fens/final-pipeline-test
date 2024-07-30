@@ -1,6 +1,10 @@
 pipeline {
     agent any
-    
+
+    environment {
+        AWS_CREDENTIALS_ID = credentials('AWS Credentials')
+    }
+
     stages {
         stage('checkout'){
             steps{
@@ -11,16 +15,8 @@ pipeline {
         } 
         stage('Run Script') {
             steps {
-                
 
-                    withCredentials([[
-                    $class: 'AmazonWebServicesCredentialsBinding',
-                    credentialsId: 'AWS Credentials',
-                    accessKeyVariable: 'AWS_ACCESS_KEY_ID',
-                    secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
-                ]]){
-                    bat 'script.sh 0 apply'
-                }
+                bat 'script.sh 0 apply'
                     
                 
             }
