@@ -11,7 +11,7 @@ pipeline {
         } 
         stage('Run Script') {
             steps {
-                script {
+                
 
                     withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
@@ -22,7 +22,7 @@ pipeline {
                     bat 'script.sh all plan'
                 }
                     
-                }
+                
             }
         }
     }
