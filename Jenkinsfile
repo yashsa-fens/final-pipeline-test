@@ -15,9 +15,9 @@ pipeline {
         } 
         stage('Run Script') {
             steps {
-
+                script {
                 bat 'script.sh 0 apply'
-                    
+                }  
                 
             }
         }
