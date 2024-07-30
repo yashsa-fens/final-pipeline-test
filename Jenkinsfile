@@ -12,9 +12,16 @@ pipeline {
         stage('Run Script') {
             steps {
                 script {
-                    
-                    bat 'script.sh all plan'
 
+                    withCredentials([[
+                    $class: 'AmazonWebServicesCredentialsBinding',
+                    credentialsId: 'AWS Credentials',
+                    accessKeyVariable: 'AWS_ACCESS_KEY_ID',
+                    secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
+                ]]){
+                    bat 'script.sh all plan'
+                }
+                    
                 }
             }
         }
