@@ -9,7 +9,7 @@ data "aws_iam_policy_document" "example" {
       identifiers = ["cloudtrail.amazonaws.com"]
     }
 
-    actions   = ["s3:GetBucketAcl"]
+    actions   = ["s3:GetBucketAcl"] 
     resources = [aws_s3_bucket.example.arn]
     condition {
       test     = "StringEquals"

@@ -1,5 +1,5 @@
-access_key = "YOUR-ACCESS-KEY"
-secret_key = "YOUR-SECRET-KEY"
+access_key = ""
+secret_key = ""
 users = {
   "username" = {
     "name"  = "IAM username"

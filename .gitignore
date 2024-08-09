@@ -1,0 +1,7 @@
+data-generation/terraform.tfstate
+data-generation/.terraform.lock.hcl
+data-generation/terraform.tfstate.backup
+data-generation/.terraform/modules/modules.json
+data-generation/.terraform/providers/registry.terraform.io/hashicorp/aws/5.60.0/windows_amd64/LICENSE.txt
+data-generation/.terraform/providers/registry.terraform.io/hashicorp/aws/5.60.0/windows_amd64/terraform-provider-aws_v5.60.0_x5.exe
+data-generation/.terraform/providers/registry.terraform.io/hashicorp/tls/4.0.5/windows_amd64/terraform-provider-tls_v4.0.5_x5.exe

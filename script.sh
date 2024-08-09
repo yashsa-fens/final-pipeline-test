@@ -14,12 +14,18 @@
 # Modules 7. EC2_rules_violation
 # Modules 8. sns_rules_violation
 # Modules 9. sqs_rules_violation
+# Modules 10. vpc_rules_violation
 
 
 # Actions : plan,apply,destroy
 
 # Declare the modules array with all modules
-declare -a modules=("iam_user_all_rules_violation" "account_rules_violation" "cloudtrail_and_s3_bucket_rules_violation" "kms_key_rules_violation" "network_acl_rules_violation" "security_group_rules_violation" "RDS_rules_violation" "EC2_rules_violation" "sns_rules_violation" "sqs_rules_violation")
+
+set -e
+
+set -o pipefail
+
+declare -a modules=("iam_user_all_rules_violation" "account_rules_violation" "cloudtrail_and_s3_bucket_rules_violation" "kms_key_rules_violation" "network_acl_rules_violation" "security_group_rules_violation" "RDS_rules_violation" "EC2_rules_violation" "sns_rules_violation" "sqs_rules_violation" "vpc_rules_violation")
 
 module=$1
 action=$2
